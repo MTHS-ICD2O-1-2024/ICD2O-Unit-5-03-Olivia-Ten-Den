@@ -32,6 +32,6 @@ function checkNumber() {
   else  {
     //output
     document.getElementById("result").innerHTML =
-      "<p>Uh, I think you may be to young to watch a movie by yourself.</p>"
+      "<p>I think you may be to young to watch a movie by yourself. :(</p>"
   }
 }
