@@ -6,24 +6,32 @@
 
 "use strict"
 
-const randomNumber = Math.floor(Math.random() * 6) + 1
-
 function checkNumber() {
   // input
-  const userNumber = parseInt(document.getElementById('user-number').value)
+  const ageNumber = parseInt(document.getElementById("age-number").value)
 
   // process
-  if (userNumber === randomNumber) {
+  if (ageNumber >= 17) {
     //output
-    document.getElementById('result').innerHTML =
-      '<p>You guessed the right number!</p>'
+    document.getElementById("result").innerHTML =
+      "<p>You can see an R movie alone.</p>"
   }
-
   // process
-  if (userNumber !== randomNumber) {
+  else if (ageNumber >= 13) {
     //output
-    document.getElementById('result').innerHTML =
-      '<p>You guessed the wrong number!' +
-      '<br>The correct number was: ' + randomNumber + '</p>'
+    document.getElementById("result").innerHTML =
+      "<p>You can see a PG-13 movie alone.</p>"
+  }
+    // process
+  else if (ageNumber >= 5) {
+    //output
+    document.getElementById("result").innerHTML =
+      "<p>You can see a G or PG movie alone.</p>"
+  }
+    // process
+  else  {
+    //output
+    document.getElementById("result").innerHTML =
+      "<p>Uh, I think you may be to young to watch a movie by yourself.</p>"
   }
 }
